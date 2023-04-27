@@ -14,12 +14,12 @@
                 <img src="imgs\header\Union-logo.jfif" alt="Union-logo">
             </div>
             <div class="title">
-                <h1>Pantalla UCAPESEN</h1>
+                <h1>Pantalla Promocional</h1>
             </div>
         </div>
         <div class="main">
             <div class="content">
-                <img src="imgs\content\JUAN-20-ANOS-3-900x507.jpg" alt="">
+                <img id="banner-img" src="imgs\content\JUAN-20-ANOS-3-900x507.jpg" alt="">
             </div>
             <div class="a-side">
                 <div class="financial-inst">
@@ -39,5 +39,33 @@
             </div>
         </div>
     </div>
+    <script>
+    const images = [
+        'imgs/content/ucapesen-historia-2.jpg',
+        'imgs/content/DSCF0003.JPG',
+        'imgs/content/DSCF0012.JPG'
+    ];
+    </script>
+    <script>
+    function rotateImages() {
+        const bannerImg = document.getElementById('banner-img');
+        let index = 0;
+        setInterval(() => {
+          index = (index + 1) % images.length;
+          bannerImg.style.opacity = 0;
+          setTimeout(() => {
+            bannerImg.src = images[index];
+            bannerImg.style.opacity = 1;
+          }, 1000);
+        }, 5000);
+      }  
+    </script>
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        rotateImages();
+      });
+    </script>
+    
+      
 </body>
 </html>
