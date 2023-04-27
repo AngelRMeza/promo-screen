@@ -42,8 +42,19 @@ body {
 
 .content {
     height: 100%;
-    width: 85%;
+    width: 90%;
     background-color: #f2f2f2;
+    position: relative;
+    overflow: hidden;
+}
+
+.content img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
 
 .a-side {
@@ -83,4 +94,8 @@ body {
     height: 50%;
     width: 100%;
     background-color: #ccc;
+}
+img {
+    max-width: 100%;
+    max-height: 100%;
 }
